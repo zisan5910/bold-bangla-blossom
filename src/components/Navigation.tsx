@@ -154,10 +154,9 @@ const Navigation = ({
               {navigationItems.map((item) => (
                 <motion.button
                   key={item.id}
-                  whileHover={{ 
-                    scale: 1.05,
-                    backgroundColor: 'rgba(241, 245, 249, 0.7)'
-                  }}
+          whileHover={{ 
+            backgroundColor: 'rgba(241, 245, 249, 0.7)'
+          }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => scrollToSection(item.target || item.id)}
                   className={cn(

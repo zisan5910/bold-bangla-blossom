@@ -56,20 +56,20 @@ export const researchData: ResearchItem[] = [
   {
     id: "1",
     title: {
-      en: "The Role of Prayer in Islamic Spirituality",
-      bn: "ইসলামী আধ্যাত্মিকতায় নামাজের ভূমিকা"
+      en: "The Impact of Digital Technology on Youth Education in Bangladesh",
+      bn: "বাংলাদেশে যুব শিক্ষায় ডিজিটাল প্রযুক্তির প্রভাব"
     },
     abstract: {
-      en: "This research explores the fundamental role of prayer (Salah) in Islamic spirituality and its impact on the spiritual development of Muslims. Through comprehensive analysis of Islamic texts and contemporary practices, this study demonstrates how prayer serves as a cornerstone of spiritual growth.",
-      bn: "এই গবেষণায় ইসলামী আধ্যাত্মিকতায় নামাজের মৌলিক ভূমিকা এবং মুসলমানদের আধ্যাত্মিক উন্নতিতে এর প্রভাব নিয়ে আলোচনা করা হয়েছে। ইসলামী গ্রন্থ ও সমসাময়িক অনুশীলনের ব্যাপক বিশ্লেষণের মাধ্যমে এই অধ্যয়নে দেখানো হয়েছে কীভাবে নামাজ আধ্যাত্মিক উন্নয়নের ভিত্তিপ্রস্তর হিসেবে কাজ করে।"
+      en: "This research investigates the transformative impact of digital technology on youth education in Bangladesh, examining how platforms like HSCian are revolutionizing access to quality education. Through analysis of educational platforms and student engagement data, this study demonstrates the potential of digital tools to bridge educational gaps and enhance learning outcomes.",
+      bn: "এই গবেষণা বাংলাদেশে যুব শিক্ষায় ডিজিটাল প্রযুক্তির রূপান্তরকারী প্রভাব অনুসন্ধান করে, যেখানে HSCian এর মতো প্ল্যাটফর্মগুলো কীভাবে মানসম্মত শিক্ষার অ্যাক্সেসে বিপ্লব ঘটাচ্ছে তা পরীক্ষা করা হয়েছে। শিক্ষা প্ল্যাটফর্ম ও শিক্ষার্থী সম্পৃক্ততার তথ্য বিশ্লেষণের মাধ্যমে এই অধ্যয়ন শিক্ষাগত ব্যবধান কমাতে ও শেখার ফলাফল উন্নত করতে ডিজিটাল সরঞ্জামের সম্ভাবনা প্রদর্শন করে।"
     },
     keywords: {
-      en: ["Prayer", "Islam", "Spirituality", "Faith", "Worship", "Salah", "Islamic Practice"],
-      bn: ["নামাজ", "ইসলাম", "আধ্যাত্মিকতা", "বিশ্বাস", "ইবাদত", "সালাত", "ইসলামী অনুশীলন"]
+      en: ["Digital Education", "Youth", "Bangladesh", "Educational Technology", "Online Learning", "HSCian", "E-learning"],
+      bn: ["ডিজিটাল শিক্ষা", "যুব", "বাংলাদেশ", "শিক্ষা প্রযুক্তি", "অনলাইন শিক্ষা", "HSCian", "ই-লার্নিং"]
     },
     introduction: {
-      en: "Prayer (Salah) represents one of the most fundamental aspects of Islamic worship and spirituality. As the second pillar of Islam, it establishes a direct and intimate connection between the believer and Allah. The significance of prayer extends beyond mere ritual observance; it serves as a transformative spiritual practice that shapes the Muslim's consciousness, character, and relationship with the divine.",
-      bn: "নামাজ (সালাত) ইসলামী ইবাদত ও আধ্যাত্মিকতার অন্যতম মৌলিক দিক। ইসলামের দ্বিতীয় স্তম্ভ হিসেবে এটি বিশ্বাসী ও আল্লাহর মধ্যে প্রত্যক্ষ ও ঘনিষ্ঠ সংযোগ স্থাপন করে। নামাজের গুরুত্ব নিছক আনুষ্ঠানিক পালনের চেয়ে অনেক বেশি; এটি একটি রূপান্তরকারী আধ্যাত্মিক অনুশীলন যা মুসলমানের চেতনা, চরিত্র এবং ঐশ্বরিকতার সাথে সম্পর্ক গঠন করে।"
+      en: "Digital technology has emerged as a transformative force in education worldwide, and Bangladesh is no exception. As a young student and developer, I have witnessed firsthand the challenges faced by HSC students in accessing quality educational resources. The traditional education system often fails to provide equal opportunities for all students, particularly those from economically disadvantaged backgrounds. Through my work on HSCian, a non-profit educational platform, I have explored how digital technology can democratize education and provide free, high-quality resources to all students regardless of their financial circumstances.",
+      bn: "ডিজিটাল প্রযুক্তি বিশ্বব্যাপী শিক্ষায় একটি রূপান্তরকারী শক্তি হিসেবে আবির্ভূত হয়েছে, এবং বাংলাদেশও এর ব্যতিক্রম নয়। একজন তরুণ শিক্ষার্থী ও ডেভেলপার হিসেবে আমি প্রত্যক্ষভাবে দেখেছি এইচএসসি শিক্ষার্থীরা মানসম্মত শিক্ষা সামগ্রী অ্যাক্সেসে যে চ্যালেঞ্জের মুখোমুখি হয়। ঐতিহ্যবাহী শিক্ষা ব্যবস্থা প্রায়ই সব শিক্ষার্থীর জন্য সমান সুযোগ প্রদান করতে ব্যর্থ হয়, বিশেষ করে যারা অর্থনৈতিকভাবে পিছিয়ে থাকা পরিবার থেকে আসে। HSCian, একটি অলাভজনক শিক্ষা প্ল্যাটফর্মে আমার কাজের মাধ্যমে আমি অন্বেষণ করেছি কীভাবে ডিজিটাল প্রযুক্তি শিক্ষার গণতন্ত্রীকরণ করতে পারে এবং আর্থিক অবস্থা নির্বিশেষে সব শিক্ষার্থীকে বিনামূল্যে মানসম্মত সম্পদ প্রদান করতে পারে।"
     },
     objectives: {
       en: "1. To examine the theological foundations of prayer in Islamic tradition\n2. To analyze the psychological and spiritual benefits of regular prayer practice\n3. To investigate the role of prayer in character development and moral purification\n4. To explore the community-building aspects of congregational prayer\n5. To assess the contemporary relevance of traditional prayer practices",

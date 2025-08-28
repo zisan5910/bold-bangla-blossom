@@ -302,11 +302,17 @@ const CertificateSlider = ({ certificates, language }: CertificateSliderProps) =
               <ChevronLeft className="w-5 h-5" />
             </button>
 
-            {/* Certificate Title - Always visible */}
+            {/* Certificate Title with Verify Button - Always visible */}
             <div className="flex-1 text-center px-4">
-              <h3 className="text-sm sm:text-base md:text-lg font-medium text-gray-700 line-clamp-2">
+              <h3 className="text-sm sm:text-base md:text-lg font-medium text-gray-700 line-clamp-2 mb-2">
                 {certificates[currentIndex].title[language]}
               </h3>
+              <button
+                onClick={() => window.open(certificates[currentIndex].image, '_blank')}
+                className="px-3 py-1 bg-green-100 text-green-700 text-xs sm:text-sm rounded-full hover:bg-green-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              >
+                {language === 'en' ? 'Verify Certificate' : 'সার্টিফিকেট যাচাই করুন'}
+              </button>
             </div>
 
             {/* Right Arrow - Visible on all devices */}
