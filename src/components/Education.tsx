@@ -67,14 +67,14 @@ const Education = ({ language }: EducationProps) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
+        className="section-card"
         aria-labelledby="education-heading"
       >
         <h2
           id="education-heading"
-          className="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-800"
+          className="premium-title flex items-center gap-3"
         >
-          <div className="p-2 bg-emerald-100 rounded-lg">
+          <div className="icon-wrapper bg-emerald-100">
             <BookOpen className="text-emerald-600" size={24} />
           </div>
           {language === 'en' ? 'Education' : 'শিক্ষা'}

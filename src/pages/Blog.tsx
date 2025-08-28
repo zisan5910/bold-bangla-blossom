@@ -8,8 +8,8 @@ interface BlogProps {
 
 const Blog = ({ language }: BlogProps) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 pt-16">
-      <div className="max-w-2xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-slate-50 pt-16">
+      <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="space-y-6">
           {blogData.map((post: BlogPost, index) => (
             <motion.article
@@ -17,7 +17,7 @@ const Blog = ({ language }: BlogProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="section-card overflow-hidden"
             >
               {/* Post Header - Facebook style */}
               <div className="p-4">

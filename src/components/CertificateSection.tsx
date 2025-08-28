@@ -17,10 +17,12 @@ const CertificateSection = ({ language, content, certificates }: CertificateSect
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="bg-white p-6 rounded-lg shadow-md"
+        className="section-card"
       >
-        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-green-700">
-          <FileText />
+        <h2 className="premium-title flex items-center gap-3">
+          <div className="icon-wrapper bg-green-100">
+            <FileText className="text-green-600" size={24} />
+          </div>
           {content[language].certifications}
         </h2>
         <CertificateSlider

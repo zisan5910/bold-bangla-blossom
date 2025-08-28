@@ -33,7 +33,7 @@ export const blogData: BlogPost[] = [
       en: "Md Ridoan Mahmud Zisan",
       bn: "মো রিদওয়ান মাহমুদ জিসান"
     },
-    type: "Development",
+    type: "article" as const,
     imageUrl: "https://i.postimg.cc/zDQ8gh3Z/Sleep-paralyse-20250727-013506-0000.png"
   },
   {

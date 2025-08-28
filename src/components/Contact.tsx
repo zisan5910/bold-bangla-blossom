@@ -121,14 +121,16 @@ const Contact = ({ language }: ContactProps) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
-        className="bg-white p-4 sm:p-6 rounded-lg shadow-md mx-2 sm:mx-0"
+        className="section-card mx-2 sm:mx-0"
         aria-labelledby="contact-heading"
       >
         <h2
           id="contact-heading"
-          className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 flex items-center gap-2 text-green-700"
+          className="premium-title flex items-center gap-3"
         >
-          <Mail className="text-emerald-500" />
+          <div className="icon-wrapper bg-emerald-100">
+            <Mail className="text-emerald-500" size={24} />
+          </div>
           {contactData.title[language]}
         </h2>
 

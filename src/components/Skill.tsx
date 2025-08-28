@@ -149,14 +149,14 @@ const Skills = ({ language }: SkillsProps) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
+        className="section-card"
         aria-labelledby="skills-heading"
       >
         <h2
           id="skills-heading"
-          className="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-800"
+          className="premium-title flex items-center gap-3"
         >
-          <div className="p-2 bg-emerald-100 rounded-lg">
+          <div className="icon-wrapper bg-emerald-100">
             <Award className="text-emerald-600" size={24} />
           </div>
           {language === 'en' ? 'Skills & Competencies' : 'দক্ষতা ও সক্ষমতা'}

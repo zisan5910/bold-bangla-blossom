@@ -186,14 +186,16 @@ const Experience = ({ language }: ExperienceProps) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
-        className="bg-white p-6 rounded-lg shadow-md"
+        className="section-card"
         aria-labelledby="experience-heading"
       >
         <h2
           id="experience-heading"
-          className="text-2xl font-bold mb-8 flex items-center gap-2 text-green-700"
+          className="premium-title flex items-center gap-3"
         >
-          <Briefcase className="text-emerald-500" />
+          <div className="icon-wrapper bg-emerald-100">
+            <Briefcase className="text-emerald-500" size={24} />
+          </div>
           {language === 'en' ? 'Experience' : 'অভিজ্ঞতা'}
         </h2>
 

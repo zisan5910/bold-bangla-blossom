@@ -7,8 +7,8 @@ interface ResearchProps {
 
 const Research = ({ language }: ResearchProps) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-16">
-      <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-slate-50 pt-16">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="space-y-8">
           {researchData.map((item: ResearchItem, index) => (
             <motion.article
@@ -16,7 +16,7 @@ const Research = ({ language }: ResearchProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="section-card overflow-hidden"
             >
               {/* Author Section */}
               <div className="p-6 border-b border-gray-200">

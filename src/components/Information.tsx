@@ -74,14 +74,16 @@ const Information = ({ language, age }: InformationProps) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
-        className="bg-white p-6 rounded-lg shadow-md"
+        className="section-card"
         aria-labelledby="family-heading"
       >
         <h2
           id="family-heading"
-          className="text-2xl font-bold mb-8 flex items-center gap-2 text-green-700"
+          className="premium-title flex items-center gap-3"
         >
-          <Heart className="text-red-500" aria-hidden="true" />
+          <div className="icon-wrapper bg-red-100">
+            <Heart className="text-red-500" size={24} aria-hidden="true" />
+          </div>
           {language === 'en' ? 'Family' : 'পরিবার'}
         </h2>
 
