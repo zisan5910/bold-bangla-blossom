@@ -311,7 +311,7 @@ const FloatingMenu = ({
       {/* Floating Trigger Button - Ghost AI */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="fixed bottom-4 right-4 z-50 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         style={{
@@ -319,7 +319,7 @@ const FloatingMenu = ({
           color: 'white'
         }}
       >
-        <Ghost size={24} />
+        <Ghost size={20} />
       </motion.button>
 
       {/* Floating Panel */}
@@ -330,7 +330,7 @@ const FloatingMenu = ({
             animate={{ opacity: 1, scale: 1, x: 0 }}
             exit={{ opacity: 0, scale: 0.8, x: '100%' }}
             transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-            className="fixed top-4 right-4 bottom-4 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 flex flex-col overflow-hidden"
+            className="fixed top-4 right-4 bottom-4 w-80 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 flex flex-col overflow-hidden"
             style={{
               background: 'linear-gradient(145deg, #ffffff, #f8fafc)',
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
@@ -512,19 +512,21 @@ const FloatingMenu = ({
                     {language === 'en' ? 'Social Links' : 'সামাজিক লিঙ্ক'}
                   </h3>
                   
-                  <div className="grid grid-cols-1 gap-3">
+                  <div className="grid grid-cols-2 gap-3">
                     {socialLinks.map((social, index) => (
                       <motion.a
                         key={index}
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-200 ${social.bgColor} ${social.color}`}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                        className={`group flex items-center justify-center p-3 rounded-full transition-all duration-200 ${social.bgColor} ${social.color} hover:scale-105`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        title={social.name}
                       >
-                        {social.icon}
-                        <span className="font-medium">{social.name}</span>
+                        <div className="transform transition-transform duration-200 group-hover:scale-110">
+                          {social.icon}
+                        </div>
                       </motion.a>
                     ))}
                   </div>

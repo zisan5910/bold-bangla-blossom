@@ -154,16 +154,14 @@ const Navigation = ({
               {navigationItems.map((item) => (
                 <motion.button
                   key={item.id}
-          whileHover={{ 
-            backgroundColor: 'rgba(241, 245, 249, 0.7)'
-          }}
+          whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => scrollToSection(item.target || item.id)}
                   className={cn(
                     'flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 min-w-fit',
                     isActive(item.id)
                       ? 'bg-gray-100/80 text-gray-900 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   )}
                   title={getDisplayName(item.id)}
                 >
