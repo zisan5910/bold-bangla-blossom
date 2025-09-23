@@ -3,6 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance Optimizations */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for all sections */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Premium Color Palette for Professional Portfolio */
   --primary: 220 91% 60%;            /* Royal blue */
