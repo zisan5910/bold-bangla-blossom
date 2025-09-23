@@ -311,7 +311,7 @@ const FloatingMenu = ({
       {/* Floating Trigger Button - Ghost AI */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 z-50 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         style={{
@@ -319,7 +319,7 @@ const FloatingMenu = ({
           color: 'white'
         }}
       >
-        <Ghost size={20} />
+        <Ghost size={24} />
       </motion.button>
 
       {/* Floating Panel */}
@@ -330,40 +330,40 @@ const FloatingMenu = ({
             animate={{ opacity: 1, scale: 1, x: 0 }}
             exit={{ opacity: 0, scale: 0.8, x: '100%' }}
             transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-            className="fixed top-4 right-4 bottom-4 w-80 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 flex flex-col overflow-hidden"
+            className="fixed bottom-6 right-6 w-80 h-96 max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 flex flex-col overflow-hidden"
             style={{
               background: 'linear-gradient(145deg, #ffffff, #f8fafc)',
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
             }}
           >
             {/* Header */}
-            <div className="p-4 border-b border-slate-200 text-white" style={{
+            <div className="p-3 border-b border-slate-200 text-white" style={{
               background: 'linear-gradient(135deg, #7c3aed, #a855f7)'
             }}>
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
-                  <Ghost size={20} />
-                  <h2 className="text-lg font-bold">Ghost AI</h2>
+                  <Ghost size={18} />
+                  <h2 className="text-base font-bold">Ghost AI</h2>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-white/20 rounded-lg transition-colors"
                 >
-                  <X size={20} />
+                  <X size={18} />
                 </button>
               </div>
               
               {/* Tab Navigation */}
               <div className="flex gap-1">
                 {[
-                  { id: 'nav', label: language === 'en' ? 'Navigate' : 'নেভিগেশন', icon: <Globe size={16} /> },
-                  { id: 'chat', label: language === 'en' ? 'AI Chat' : 'AI চ্যাট', icon: <Ghost size={16} /> },
-                  { id: 'social', label: language === 'en' ? 'Social' : 'সামাজিক', icon: <Coffee size={16} /> }
+                  { id: 'nav', label: language === 'en' ? 'Navigate' : 'নেভিগেশন', icon: <Globe size={14} /> },
+                  { id: 'chat', label: language === 'en' ? 'AI Chat' : 'AI চ্যাট', icon: <Ghost size={14} /> },
+                  { id: 'social', label: language === 'en' ? 'Social' : 'সামাজিক', icon: <Coffee size={14} /> }
                 ].map(tab => (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id as any)}
-                    className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                    className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
                       activeTab === tab.id
                         ? 'bg-white/20 text-white'
                         : 'text-white/70 hover:text-white hover:bg-white/10'
@@ -380,11 +380,11 @@ const FloatingMenu = ({
             <div className="flex-1 overflow-hidden">
               {/* Navigation Tab */}
               {activeTab === 'nav' && (
-                <div className="p-4 space-y-4 h-full overflow-y-auto">
-                  <h3 className="font-semibold text-slate-800 mb-3">
+                <div className="p-3 space-y-3 h-full overflow-y-auto">
+                  <h3 className="font-semibold text-slate-800 text-sm mb-2">
                     {language === 'en' ? 'Quick Navigation' : 'দ্রুত নেভিগেশন'}
                   </h3>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-1.5">
                     {quickNavItems.map(item => (
                       <motion.button
                         key={item.id}
@@ -392,7 +392,7 @@ const FloatingMenu = ({
                           scrollToSection(item.id);
                           setIsOpen(false);
                         }}
-                        className={`flex items-center gap-2 p-3 rounded-lg text-sm transition-all ${
+                        className={`flex items-center gap-1.5 p-2 rounded-lg text-xs transition-all ${
                           activeSection === item.id
                             ? 'bg-purple-100 text-purple-700 border border-purple-200'
                             : 'bg-slate-50 hover:bg-slate-100 text-slate-700'
@@ -407,16 +407,16 @@ const FloatingMenu = ({
                   </div>
                   
                   {/* Quick Actions */}
-                  <div className="mt-6 space-y-2">
-                    <h4 className="font-semibold text-slate-700 text-sm">
+                  <div className="mt-3 space-y-1.5">
+                    <h4 className="font-semibold text-slate-700 text-xs">
                       {language === 'en' ? 'Quick Actions' : 'দ্রুত কর্ম'}
                     </h4>
                     <a
                       href="/Resume.pdf"
                       download="Md Ridoan Mahmud Zisan.pdf"
-                      className="flex items-center gap-2 p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
+                      className="flex items-center gap-1.5 p-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-xs"
                     >
-                      <Download size={16} />
+                      <Download size={14} />
                       <span className="font-medium">{language === 'en' ? 'Download CV' : 'সিভি ডাউনলোড'}</span>
                     </a>
                     <a
@@ -433,12 +433,12 @@ const FloatingMenu = ({
               {/* Chat Tab */}
               {activeTab === 'chat' && (
                 <div className="flex flex-col h-full">
-                  <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                  <div className="flex-1 overflow-y-auto p-3 space-y-3">
                     {messages.length === 0 && (
-                      <div className="text-center text-slate-500 mt-8">
-                        <Ghost className="w-12 h-12 mx-auto text-purple-500 mb-3" />
-                        <p className="font-medium">Ghost AI Ready</p>
-                        <p className="text-sm mt-1">
+                      <div className="text-center text-slate-500 mt-6">
+                        <Ghost className="w-10 h-10 mx-auto text-purple-500 mb-2" />
+                        <p className="font-medium text-sm">Ghost AI Ready</p>
+                        <p className="text-xs mt-1">
                           {language === 'en' 
                             ? 'Ask me anything about Ridoan\'s professional background!'
                             : 'রিদওয়ানের পেশাদার পটভূমি সম্পর্কে যেকোনো প্রশ্ন করুন!'
@@ -453,13 +453,13 @@ const FloatingMenu = ({
                         className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
                       >
                         <div
-                          className={`max-w-[80%] p-3 rounded-lg ${
+                          className={`max-w-[80%] p-2 rounded-lg ${
                             message.role === 'user'
                               ? 'bg-purple-500 text-white'
                               : 'bg-slate-100 text-slate-800'
                           }`}
                         >
-                          <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                          <p className="text-xs whitespace-pre-wrap">{message.content}</p>
                           <p className="text-xs opacity-70 mt-1">
                             {format(message.timestamp, 'HH:mm')}
                           </p>
@@ -469,11 +469,11 @@ const FloatingMenu = ({
                     
                     {isLoading && (
                       <div className="flex justify-start">
-                        <div className="bg-slate-100 p-3 rounded-lg">
+                        <div className="bg-slate-100 p-2 rounded-lg">
                           <div className="flex gap-1">
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce"></div>
+                            <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                           </div>
                         </div>
                       </div>
@@ -532,21 +532,21 @@ const FloatingMenu = ({
                   </div>
 
                   {/* Contact Info */}
-                  <div className="mt-6 p-4 bg-slate-50 rounded-lg">
-                    <h4 className="font-semibold text-slate-700 mb-3">
+                  <div className="mt-3 p-3 bg-slate-50 rounded-lg">
+                    <h4 className="font-semibold text-slate-700 mb-2 text-xs">
                       {language === 'en' ? 'Quick Contact' : 'দ্রুত যোগাযোগ'}
                     </h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center gap-2">
-                        <Phone size={16} className="text-green-600" />
+                    <div className="space-y-1.5 text-xs">
+                      <div className="flex items-center gap-1.5">
+                        <Phone size={12} className="text-green-600" />
                         <span>{professionalData.personal.phone}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Mail size={16} className="text-blue-600" />
+                      <div className="flex items-center gap-1.5">
+                        <Mail size={12} className="text-blue-600" />
                         <span>{professionalData.personal.email}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar size={16} className="text-purple-600" />
+                      <div className="flex items-center gap-1.5">
+                        <Calendar size={12} className="text-purple-600" />
                         <span>{language === 'en' ? 'Available for opportunities' : 'সুযোগের জন্য উপলব্ধ'}</span>
                       </div>
                     </div>
